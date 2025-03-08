@@ -1,0 +1,56 @@
+router.get('/calf', (req, res) => {
+    let condition = ''
+
+    condition += req.query.farm_id != '' && req.query.farm_id != undefined ? ` and calf_treatment.farm_id='${req.query.farm_id}'` : ``
+    condition += req.query.doctor_id != '' && req.query.doctor_id != undefined ? ` and doctors.user_id='${req.query.doctor_id}'` : ``
+
+
+    con.query(`select calf_treatment.*, calf_disease_images.image_url from calf_treatment 
+    join calf_disease_images on calf_disease_images.treatment_id=calf_treatment.id
+        join doctors on doctors.id=calf_treatment.doctor_id
+    where 1=1 ${condition}`, function (err, results) {
+        if (err) throw err;
+        res.status(201).json(results)
+    })
+})
+
+router.get('/calf/doctor', (req, res) => {
+    let condition = ''
+
+    condition += req.query.user_id != '' && req.query.user_id != undefined ? ` and doctors.user_id='${req.query.user_id}'` : ``
+
+
+    con.query(`select calf_treatment.*,  calf_disease_images.image_url from calf_treatment 
+    
+    join doctors on doctors.id=calf_treatment.doctor_id
+    join calf_disease_images on calf_disease_images.treatment_id=calf_treatment.id
+    where 1=1 ${condition}`, function (err, results) {
+        if (err) throw err;
+        res.status(201).json(results)
+    })
+})
+
+router.get('/calf/calf', (req, res) => {
+    console.log(`select calf_treatment.* from calf_treatment 
+    
+    join doctors on doctors.id=calf_treatment.doctor_id
+    where doctors.user_id='${req.query.user_id}' and calf_treatment.calf_id='${req.query.calf_id}'`);
+
+    con.query(`select calf_treatment.* from calf_treatment 
+
+    join doctors on doctors.id=calf_treatment.doctor_id
+    where doctors.user_id='${req.query.user_id}' and calf_treatment.calf_id='${req.query.calf_id}'`, function (err, results) {
+        if (err) throw err;
+        res.status(201).json(results)
+    })
+})
+
+
+router.put('/calf/treatment', (req, res) => {
+    const { treatment } = req.body
+
+    con.query(`update calf_treatment join doctors on doctors.id=calf_treatment.doctor_id   set treatment_desc='${treatment}' where doctors.user_id='${req.query.doctor_id}'`, function (err, results) {
+        if (err) throw err;
+        res.status(201).json(results)
+    })
+})
