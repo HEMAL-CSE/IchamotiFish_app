@@ -515,7 +515,7 @@ class _HomeState extends State<HomePage> {
 
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, '/biogasdashboard');
+                    Navigator.pushNamed(context, '/ichamotidashboard');
                   },
                   child: Card(
                     elevation: 5,

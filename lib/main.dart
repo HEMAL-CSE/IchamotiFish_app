@@ -74,6 +74,7 @@ import 'package:tania_farm/Doctor/Doctor.dart';
 import 'package:tania_farm/Doctor/Duck/DoctorDuck.dart';
 import 'package:tania_farm/Doctor/Goat/DoctorGoat.dart';
 import 'package:tania_farm/Home.dart';
+import 'package:tania_farm/Ichamoti/ichamotidashboard.dart';
 import 'package:tania_farm/Milk/Customers/DairyCustomer.dart';
 import 'package:tania_farm/Milk/Customers/DairyCustomerInfo.dart';
 import 'package:tania_farm/Milk/Expenses/Expenses.dart';
@@ -212,6 +213,7 @@ class MyApp extends StatelessWidget {
 
         // Cow/ Breeding:
         '/cowdashboard' : (context) => CowDashboard(),
+        
         '/cowpurchase': (context) => CowPurchase(),
         '/cowdelivary': (context) => DelivaryReport(),
         '/cowexpenses': (context) => BreedingExpenses(),
@@ -307,6 +309,8 @@ class MyApp extends StatelessWidget {
          '/doctorchicken': (context) => DoctorChicken(),
         '/doctorgoat': (context) => DoctorGoat(),
         '/doctorcalf': (context) => DoctorCalf(),
+
+        '/ichamotidashboard': (context) => Ichamotidashboard(),
 
 
       },

@@ -11,10 +11,11 @@ class CowDashboard extends StatefulWidget {
 }
 
 class _CowDashboardState extends State<CowDashboard> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomAppBar(title: 'গাভী সম্পর্কিত ড্যাশবোর্ড',),
+        appBar: CustomAppBar(title: 'পদ্মা সম্পর্কিত ড্যাশবোর্ড',),
 
         body: CustomScrollView(
           primary: false,
@@ -25,83 +26,13 @@ class _CowDashboardState extends State<CowDashboard> {
               mainAxisSpacing: 10,
               crossAxisCount: 2,
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/cowpurchase');
-                  },
-                  child: Card(
-                    color: Colors.greenAccent[400],
-                    elevation: 5,
-                    margin: EdgeInsets.fromLTRB(12, 12, 0, 0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    child: Container(
-                      height: 150,
-                      width: 150,
-                      child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('ক্রয়', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
-                            SizedBox(height: 10,),
-                            Container(
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.5),
-                                    borderRadius: BorderRadius.circular(8)
-                                ),
-                                child: Icon(AntDesign.plus)
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/cowdelivary');
-                  },
-                  child: Card(
-                    color: Colors.greenAccent[400],
-                    elevation: 5,
-                    margin: EdgeInsets.fromLTRB(08, 12, 10, 0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    child: Container(
-                      height: 150,
-                      width: 150,
-                      child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('প্রসব', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
-                            SizedBox(height: 10,),
-                            Container(
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.5),
-                                    borderRadius: BorderRadius.circular(8)
-                                ),
-                                child: Icon(Foundation.results)
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
+                
                 GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, '/cowexpenses');
                   },
                   child: Card(
-                    color: Colors.greenAccent[400],
+                    color: Colors.white,
                     elevation: 5,
                     margin: EdgeInsets.fromLTRB(12, 12, 0, 0),
                     shape: RoundedRectangleBorder(
@@ -115,7 +46,6 @@ class _CowDashboardState extends State<CowDashboard> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('খরচসমূহ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
                             SizedBox(height: 10,),
                             Container(
                                 padding: EdgeInsets.all(10),
@@ -123,8 +53,10 @@ class _CowDashboardState extends State<CowDashboard> {
                                     color: Colors.white.withOpacity(0.5),
                                     borderRadius: BorderRadius.circular(8)
                                 ),
-                                child: Icon(Icons.device_hub)
-                            )
+                                child: Icon(Icons.device_hub, color: Color(0xff076614),)
+
+                            ),
+                            Text('খরচসমূহ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Color(0xff076614)),),
                           ],
                         ),
                       ),
