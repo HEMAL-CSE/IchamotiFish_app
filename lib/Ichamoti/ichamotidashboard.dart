@@ -5,51 +5,51 @@ class Ichamotidashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'পদ্মা সম্পর্কিত ড্যাশবোর্ড',),
+      appBar: CustomAppBar(title: 'ইছামতী পুকুর ড্যাশবোর্ড',),
 
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.count(
           crossAxisCount: 2,
           childAspectRatio: 1.3,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          crossAxisSpacing: 12,
+          mainAxisSpacing: 12,
           children: [
             DashboardButton(
-              icon: Icons.access_time,
-              label: 'My Attendance',
+              icon: Icons.perm_device_information_sharp,
+              label: 'পুকুরের তথ্য',
               color: Colors.pink,
               onTap: () {
-                print('Attendance clicked');
+                Navigator.pushNamed(context, '/ichamotiponds');
               },
             ),
             DashboardButton(
-              icon: Icons.beach_access_rounded,
-              label: 'Employee Profile',
-              color: Colors.purple,
+              icon: Icons.houseboat,
+              label: 'মাছের পোনার তথ্য',
+              color: Colors.lightBlue,
               onTap: () {
                 print('Profile clicked');
               },
             ),
             DashboardButton(
-              icon: Icons.exit_to_app,
-              label: 'Leave Application',
+              icon: Icons.feed_rounded,
+              label: 'খাদ্য ব্যবস্থাপনা',
               color: Colors.lightBlue,
               onTap: () {
                 Navigator.pushNamed(context, '/cowexpenses');
               },
             ),
             DashboardButton(
-              icon: Icons.badge,
-              label: 'Job Card View',
+              icon: Icons.medical_information,
+              label: 'স্বাস্থ্য ব্যবস্থাপনা',
               color: Colors.green,
               onTap: () {
                 print('Job Card clicked');
               },
             ),
             DashboardButton(
-              icon: Icons.notifications,
-              label: 'Notice Board',
+              icon: Icons.production_quantity_limits_sharp,
+              label: 'উৎপাদন',
               color: Colors.deepPurple,
               onTap: () {
                 print('Notice clicked');
@@ -57,12 +57,31 @@ class Ichamotidashboard extends StatelessWidget {
             ),
             DashboardButton(
               icon: Icons.task,
-              label: 'Task Management',
+              label: 'বিক্রয়',
               color: Colors.pinkAccent,
               onTap: () {
                 print('Task clicked');
               },
             ),
+
+            DashboardButton(
+              icon: Icons.task,
+              label: 'অন্যান্য ফিচার',
+              color: Colors.pinkAccent,
+              onTap: () {
+                print('Task clicked');
+              },
+            ),
+
+            DashboardButton(
+              icon: Icons.report_sharp,
+              label: 'রিপোর্ট',
+              color: Colors.redAccent,
+              onTap: () {
+                print('Task clicked');
+              },
+            ),
+
           ],
         ),
       ),
@@ -88,8 +107,9 @@ class DashboardButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Card(
+
         elevation: 5,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(11)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -97,14 +117,15 @@ class DashboardButton extends StatelessWidget {
             children: [
               Icon(
                 icon,
-                size: 50,
+                size: 48,
                 color: color,
               ),
+
               SizedBox(height: 10),
               Text(
                 label,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 17,
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
                 ),

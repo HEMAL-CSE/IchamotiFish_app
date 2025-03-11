@@ -75,6 +75,7 @@ import 'package:tania_farm/Doctor/Duck/DoctorDuck.dart';
 import 'package:tania_farm/Doctor/Goat/DoctorGoat.dart';
 import 'package:tania_farm/Home.dart';
 import 'package:tania_farm/Ichamoti/ichamotidashboard.dart';
+import 'package:tania_farm/Ichamoti/pondinfo.dart';
 import 'package:tania_farm/Milk/Customers/DairyCustomer.dart';
 import 'package:tania_farm/Milk/Customers/DairyCustomerInfo.dart';
 import 'package:tania_farm/Milk/Expenses/Expenses.dart';
@@ -149,38 +150,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/home': (context) => HomePage(),
-        '/vermicompostlist': (context) => VermiCompostList(),
-        '/cowdungPurchase' : (context) => CowdungPurchase(),
-        '/cowdungPurchase' : (context) => CowdungPurchase(),
-        '/labourList' : (context) => LabourList(),
-        '/cowdungsellerList' : (context) =>CowdungSellerList(),
-        '/earthworm' : (context) =>EarthwormComponent(),
-        '/productionEarthWorm' : (context) =>ProductionEarthWorm(),
-        '/sellsofEarthWorm' :(context) =>EarthWormSells(),
-        '/vermicompostprod': (context) => VermiCompostProd(),
-        '/vermicompostshed': (context) => VermiCompostShed(),
-        '/vermicompostsells': (context) => VermiCompostSells(),
-        '/labourPayment' : (context) => LabourPayment(),
-        '/othersPayment' : (context) => OthersPayment(),
-        '/othersCostList' :(context) => OthersList(),
-        '/cowpurchase': (context) => CowdungPurchase(),
-        '/vermicompostreport' : (context) =>VermiCompostReport(),
-        '/vermicompostExpensesReport' : (context) =>VermiCompostExpensesReport(),
-        '/vermiCompostProductionReport' : (context) => VermiCompostProductionReport(),
-        '/vermiCompostIncomeReport' : (context) => VermiCompostIncomeReport(),
-        '/vermiCompostProfitReport' : (context) =>VermiCompostprofitReport(),
-        '/vermicompostenvironment': (context) => VermiCompostEnvironment(),
-        '/materialsVermiCompost':(context)=>MaterialsVermiCompost(),
-        '/earthwormExpenses' : (context) =>EarthwormExpenses(),
-        '/earthwormEnvironment' : (context) =>EarthWormEnvironment(),
-        '/earthwormsellers': (context) => EarthwormSellers(),
-        '/earthwormpurchase': (context) => EarthwormPurchase(),
-        '/earthwormlabour': (context) => EarthwormLabour(),
-        '/earthwormlabourpayment': (context) => EarthwormLabourPayment(),
-        '/earthwormothers': (context) => EarthwormOthers(),
-        '/earthwormotherspayment': (context) => EarthwormOthersPayment(),
-        '/vermiCompostSellsButton' : (context) => VermiCompostSellsButton(),
-        '/vermiCompostSellBuyers' : (context) =>VermiSellsBuyersList(),
+
 
         //   Milk Section Start
         '/milkdashboard' : (context) => MilkDashboard(),
@@ -265,27 +235,7 @@ class MyApp extends StatelessWidget {
         '/beef_vaccines': (context) => BeefVaccines(),
         '/beef_medicines': (context) => BeefMedicines(),
 
-        // Dairy Section Started
-        '/dairy_production': (context) => DairyProduction(),
-        '/dairy_purchase': (context) => DairyPurchase(),
-        '/dairy_expenses': (context) => DairyExpenses(),
-        '/dairyfeed': (context) => DairyFeed(),
-        '/dairylabour': (context) => DairyLabour(),
-        '/dairylabourpayment': (context) => DairyLabourPayment(),
-        '/dairyothers': (context) => DairyOthers(),
-        '/dairyotherspayment': (context) => DairyOthersPayment(),
-        '/dairytreatmentlist': (context) => DairyTreatmentList(),
-        '/dairy_doctors': (context) => DairyDoctors(),
-        '/dairy_treatment': (context) => DairyTreatment(),
-        '/dairy_customers': (context) => DairyCustomer(),
-        '/dairy_customers_info': (context) => DairyCustomerInfo(),
-        '/dairy_healthcare': (context) => DairyHealthcare(),
-        '/dairy_medicines': (context) => DairyMedicines(),
-        '/dairy_vaccines': (context) => DairyVaccines(),
-        '/dairy_feeding': (context) => DairyFeeding(),
-        '/dairy_reports': (context) => DairyReport(),
-        '/dairy_expenses_report': (context) => DairyExpensesReport(),
-        '/dairy_purchase_report': (context) => DairyPurchaseReport(),
+
 
       //   Calf Section
 
@@ -310,7 +260,9 @@ class MyApp extends StatelessWidget {
         '/doctorgoat': (context) => DoctorGoat(),
         '/doctorcalf': (context) => DoctorCalf(),
 
+        // IchaMoti Pond Section
         '/ichamotidashboard': (context) => Ichamotidashboard(),
+        '/ichamotiponds': (context) => IchamotiPond(),
 
 
       },
