@@ -147,7 +147,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
         '/home': (context) => HomePage(),
 
@@ -240,7 +240,7 @@ class MyApp extends StatelessWidget {
       //   Calf Section
 
         //Auth
-        '/': (context) => Login(),
+        // '/': (context) => Login(),
         '/register': (context) => Signup(),
 
         //admin
