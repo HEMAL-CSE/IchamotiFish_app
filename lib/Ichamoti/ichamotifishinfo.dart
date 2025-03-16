@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tania_farm/components/CustomAppBar.dart';
 
 class Ichamotifishinfo extends StatefulWidget {
   const Ichamotifishinfo({super.key});
@@ -10,6 +11,8 @@ class Ichamotifishinfo extends StatefulWidget {
 class _IchamotifishinfoState extends State<Ichamotifishinfo> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: CustomAppBar(title: 'মাছের পোনার তথ্য',),
+    );
   }
 }

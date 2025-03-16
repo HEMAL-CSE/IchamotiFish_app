@@ -28,7 +28,7 @@ class Ichamotidashboard extends StatelessWidget {
               label: 'মাছের পোনার তথ্য',
               color: Colors.lightBlue,
               onTap: () {
-                print('Profile clicked');
+                Navigator.pushNamed(context, '/ichamotifishinfo');
               },
             ),
             DashboardButton(
