@@ -148,7 +148,6 @@ class MyApp extends StatelessWidget {
         '/ichamotifishinfo': (context) => Ichamotifishinfo(),
 
 
-
       },
 
 

@@ -48,6 +48,7 @@ class _IchamotiPondState extends State<IchamotiPond> {
 
         Container(
             margin: EdgeInsets.fromLTRB(2, 12, 2, 0),
+
             child: CustomTextField(controller: ph, hintText: "পানির পিএইচ (pH) মান:", obscureText: false, textinputtypephone: true)),
 
         Container(
