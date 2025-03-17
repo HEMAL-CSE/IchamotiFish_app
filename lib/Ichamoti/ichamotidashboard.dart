@@ -52,7 +52,7 @@ class Ichamotidashboard extends StatelessWidget {
               label: 'উৎপাদন',
               color: Colors.deepPurple,
               onTap: () {
-                print('Notice clicked');
+                Navigator.pushNamed(context, '/fishproduction');
               },
             ),
             DashboardButton(

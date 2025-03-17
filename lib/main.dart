@@ -58,6 +58,7 @@ import 'package:tania_farm/Ichamoti/ichamotifishinfo.dart';
 import 'package:tania_farm/Ichamoti/pondinfo.dart';
 
 import 'package:flutter/material.dart';
+import 'package:tania_farm/Ichamoti/production.dart';
 
 
 void main() {
@@ -146,7 +147,7 @@ class MyApp extends StatelessWidget {
         '/ichamotidashboard': (context) => Ichamotidashboard(),
         '/ichamotiponds': (context) => IchamotiPond(),
         '/ichamotifishinfo': (context) => Ichamotifishinfo(),
-
+        '/fishproduction': (context) => FishProduction(),
 
       },
 
