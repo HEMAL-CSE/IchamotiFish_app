@@ -261,6 +261,9 @@ class _IchamotifishinfoState extends State<Ichamotifishinfo> {
           margin: EdgeInsets.all(04),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
                 backgroundColor: Color(0xff076614),
                 foregroundColor: Colors.white,
               ),

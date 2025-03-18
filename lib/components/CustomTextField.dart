@@ -31,19 +31,31 @@ class CustomTextField extends StatelessWidget {
         obscureText: obscureText,
         keyboardType: textinputtypephone ? TextInputType.phone : TextInputType.text,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-            enabledBorder:  OutlineInputBorder(
-              borderRadius: BorderRadius.circular(15),
-              borderSide: BorderSide(color: Colors.black54),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0), // Rounded corners for the border
+              borderSide: BorderSide(
+                color: Colors.black54, // Color of the border line
+                width: 12.0, // Thickness of the border line
+              ),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(15),
-              borderSide: BorderSide(color: Colors.black54),
+              borderRadius: BorderRadius.circular(8.0), // Rounded corners for focused border
+              borderSide: BorderSide(
+                color: Colors.blue, // Color when the TextField is focused
+                width: 2.0,
+              ),
             ),
-            fillColor: Colors.grey.shade200,
-            filled: true,
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.0), // Rounded corners for enabled border
+              borderSide: BorderSide(
+                color: Colors.black54, // Color when the TextField is enabled (not focused)
+                width: 2.0,
+              ),
+            ),
+            contentPadding: EdgeInsets.symmetric(vertical: 11.8, horizontal: 10),
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.black)),
+            // hintStyle: TextStyle(color: Colors.black)
+        ),
       ),
     );
   }
