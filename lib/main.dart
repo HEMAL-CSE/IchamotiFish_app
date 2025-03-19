@@ -47,12 +47,15 @@ import 'package:tania_farm/Cow/Treatment/CowTreatment.dart';
 import 'package:tania_farm/Cow/Treatment/Treatment.dart';
 
 import 'package:tania_farm/Home.dart';
+import 'package:tania_farm/Ichamoti/OthersFeatures.dart';
+import 'package:tania_farm/Ichamoti/fishsells.dart';
 import 'package:tania_farm/Ichamoti/ichamotidashboard.dart';
 import 'package:tania_farm/Ichamoti/ichamotifishinfo.dart';
 import 'package:tania_farm/Ichamoti/pondinfo.dart';
 
 import 'package:flutter/material.dart';
 import 'package:tania_farm/Ichamoti/production.dart';
+
 
 
 void main() {
@@ -142,6 +145,8 @@ class MyApp extends StatelessWidget {
         '/ichamotiponds': (context) => IchamotiPond(),
         '/ichamotifishinfo': (context) => Ichamotifishinfo(),
         '/fishproduction': (context) => FishProduction(),
+        '/fishsells': (context) => Fishsells(),
+        '/othersfeatures': (context) => othersFeatures(),
 
       },
 

@@ -1,0 +1,2 @@
+D:/fishfarming/android/app/.cxx/RelWithDebInfo/o6u5e503/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/fishfarming/android/app/.cxx/RelWithDebInfo/o6u5e503/arm64-v8a/CMakeFiles/rebuild_cache.dir

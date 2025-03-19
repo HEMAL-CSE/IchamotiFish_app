@@ -14,6 +14,7 @@ class _FishProductionState extends State<FishProduction> {
   DateTime production_date = DateTime.now();
   TextEditingController fishnumber = TextEditingController();
   TextEditingController fishnumber1 = TextEditingController();
+  TextEditingController fishduation = TextEditingController();
   String? fish_spacies;
 
   List fishspacies = [
@@ -47,7 +48,7 @@ class _FishProductionState extends State<FishProduction> {
       body: ListView(children: [
 
         Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 06),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 08),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -75,7 +76,7 @@ class _FishProductionState extends State<FishProduction> {
 
         Container(
             margin: EdgeInsets.fromLTRB(2, 08, 2, 0),
-            child: CustomTextField(controller: fishnumber, hintText: "আহরণকৃত মাছের পরিমাণ: (কেজি বা টন)", obscureText: false, textinputtypephone: true)),
+            child: CustomTextField(controller: fishnumber, hintText: "আহরণকৃত মাছের মোট পরিমাণ: (কেজি বা টন)", obscureText: false, textinputtypephone: true)),
 
         for(var i in rayat)
         Row(
@@ -125,10 +126,13 @@ class _FishProductionState extends State<FishProduction> {
         ),
 
         Container(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.fromLTRB(11, 02, 220, 02),
           margin: EdgeInsets.all(04),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
                 backgroundColor: Color(0xff076614),
                 foregroundColor: Colors.white,
               ),
@@ -137,12 +141,28 @@ class _FishProductionState extends State<FishProduction> {
                   rayat.add( {'spacies': null, 'kg': TextEditingController()}
                   );
                 });
-              }, child: const Text("Add More", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),)),
+              }, child: const Text("আরও যোগ করুন", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),)),
         ),
 
+        Container(
+            margin: EdgeInsets.fromLTRB(2, 08, 2, 03),
+            child: CustomTextField(controller: fishduation, hintText: "মাছের উৎপাদন সময়কাল: (দিন বা মাস)", obscureText: false, textinputtypephone: true)),
 
+        Container( padding: EdgeInsets.all(10),
+          margin: EdgeInsets.all(04),
+          child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                backgroundColor: Color(0xff076614),
+                foregroundColor: Colors.white,
+              ),
+              onPressed: (){
+              }, child: const Text("জমা দিন", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),)),
+        ),
 
-
+        
       ],),
 
     );

@@ -60,7 +60,7 @@ class Ichamotidashboard extends StatelessWidget {
               label: 'বিক্রয়',
               color: Colors.pinkAccent,
               onTap: () {
-                print('Task clicked');
+                Navigator.pushNamed(context, '/fishsells');
               },
             ),
 
@@ -69,7 +69,7 @@ class Ichamotidashboard extends StatelessWidget {
               label: 'অন্যান্য ফিচার',
               color: Colors.pinkAccent,
               onTap: () {
-                print('Task clicked');
+                Navigator.pushNamed(context, '/othersfeatures');
               },
             ),
 
