@@ -33,10 +33,10 @@ class Ichamotidashboard extends StatelessWidget {
             ),
             DashboardButton(
               icon: Icons.feed_rounded,
-              label: 'খাদ্য ব্যবস্থাপনা',
+              label: 'খরচসমূহ',
               color: Colors.lightBlue,
               onTap: () {
-                Navigator.pushNamed(context, '/cowexpenses');
+                Navigator.pushNamed(context, '/ichamotiexpenses');
               },
             ),
             DashboardButton(

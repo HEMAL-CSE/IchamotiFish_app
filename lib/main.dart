@@ -47,6 +47,8 @@ import 'package:tania_farm/Cow/Treatment/CowTreatment.dart';
 import 'package:tania_farm/Cow/Treatment/Treatment.dart';
 
 import 'package:tania_farm/Home.dart';
+import 'package:tania_farm/Ichamoti/IchamotiExpenses/FoodExpenses.dart';
+import 'package:tania_farm/Ichamoti/IchamotiExpenses/IchamotiExpenses.dart';
 import 'package:tania_farm/Ichamoti/OthersFeatures.dart';
 import 'package:tania_farm/Ichamoti/fishsells.dart';
 import 'package:tania_farm/Ichamoti/ichamotidashboard.dart';
@@ -69,7 +71,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/home',
+      initialRoute: '/',
       routes: {
         '/home': (context) => HomePage(),
 
@@ -131,7 +133,7 @@ class MyApp extends StatelessWidget {
       //   Calf Section
 
         //Auth
-        // '/': (context) => Login(),
+        '/': (context) => Login(),
         '/register': (context) => Signup(),
 
         //admin
@@ -147,6 +149,8 @@ class MyApp extends StatelessWidget {
         '/fishproduction': (context) => FishProduction(),
         '/fishsells': (context) => Fishsells(),
         '/othersfeatures': (context) => othersFeatures(),
+        '/ichamotiexpenses': (context) => IchamotiExpenses(),
+        '/foodexpenses': (context) => Foodexpenses(),
 
       },
 

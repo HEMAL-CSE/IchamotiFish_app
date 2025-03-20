@@ -261,7 +261,7 @@ print(body['msg']);
             ),
             CustomTextField(
                 controller: mobileorusercode,
-                hintText: 'Phone Number',
+                hintText: 'Phone Number or User ID',
                 obscureText: false,
                 textinputtypephone: false
             ),

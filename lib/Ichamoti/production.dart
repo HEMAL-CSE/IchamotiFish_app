@@ -79,70 +79,117 @@ class _FishProductionState extends State<FishProduction> {
             child: CustomTextField(controller: fishnumber, hintText: "আহরণকৃত মাছের মোট পরিমাণ: (কেজি বা টন)", obscureText: false, textinputtypephone: true)),
 
         for(var i in rayat)
-        Row(
+        Column(
           children: [
-            Container(
-              width: 180,
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 13),
-              child: InputDecorator(
-                  decoration: InputDecoration(
-                    border:
-                    OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(09.0)),
-                    contentPadding: const EdgeInsets.all(10),
-                  ),
-                  child: DropdownButtonHideUnderline(
-                    child: DropdownButton<String>(
-                        isDense: true,
-                        value: i['spacies'],
-                        isExpanded: true,
-                        menuMaxHeight: 350,
-                        hint: Text('মাছের প্রজাতি নির্বাচন:', style: TextStyle(color: Colors.black87),),
-                        items: [
-                          ...fishspacies.map<DropdownMenuItem<String>>((data) {
-                            return DropdownMenuItem(
-                                child: Text(data['name']), value: data['name'].toString());
-                          }).toList(),
-                        ],
-                        onChanged: (value) {
-                          var copy=rayat;
-                          copy[copy.indexOf(i)]['spacies']=value;
-                          print("selected Value $value");
+            Row(
+              children: [
+                Container(
+                  width: 180,
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 13),
+                  child: InputDecorator(
+                      decoration: InputDecoration(
+                        border:
+                        OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(09.0)),
+                        contentPadding: const EdgeInsets.all(10),
+                      ),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                            isDense: true,
+                            value: i['spacies'],
+                            isExpanded: true,
+                            menuMaxHeight: 350,
+                            hint: Text('মাছের প্রজাতি নির্বাচন:', style: TextStyle(color: Colors.black87),),
+                            items: [
+                              ...fishspacies.map<DropdownMenuItem<String>>((data) {
+                                return DropdownMenuItem(
+                                    child: Text(data['name']), value: data['name'].toString());
+                              }).toList(),
+                            ],
+                            onChanged: (value) {
+                              var copy=rayat;
+                              copy[copy.indexOf(i)]['spacies']=value;
+                              print("selected Value $value");
 
-                          setState(() {
-                            rayat=copy;
-                          });
-                        }),
-                  )
-                // CustomTextField()
-              ),
+                              setState(() {
+                                rayat=copy;
+                              });
+                            }),
+                      )
+                    // CustomTextField()
+                  ),
+                ),
+
+                Container(
+                  width: 220,
+                  margin: EdgeInsets.fromLTRB(2, 03, 2, 0),
+                  child: CustomTextField(controller: i['kg'], hintText: "পরিমাণ (কেজি বা টন)", obscureText: false, textinputtypephone: true)),
+              ],
             ),
 
-            Container(
-              width: 220,
-              margin: EdgeInsets.fromLTRB(2, 03, 2, 0),
-              child: CustomTextField(controller: i['kg'], hintText: "পরিমাণ (কেজি বা টন)", obscureText: false, textinputtypephone: true)),
+            Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.fromLTRB(10, 02, 24, 02),
+                  margin: EdgeInsets.all(04),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        backgroundColor: Color(0xff076614),
+                        foregroundColor: Colors.white,
+                      ),
+                      onPressed: (){
+                        setState(() {
+                          rayat.add( {'spacies': null, 'kg': TextEditingController()}
+                          );
+                        });
+                      }, child: const Text("আরও যোগ করুন", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),)),
+                ),
+
+                Container(
+                  padding: EdgeInsets.fromLTRB(0, 02, 10, 02),
+                  margin: EdgeInsets.all(04),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        backgroundColor: Color(0xff076614),
+                        foregroundColor: Colors.white,
+                      ),
+                      onPressed: (){
+                        setState(() {
+                          rayat.remove(i);
+                        });
+                      }, child: const Text("ফিল্ডটি বাদ দিন", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),)),
+                ),
+              ],
+            ),
+
+
           ],
         ),
-
-        Container(
-          padding: EdgeInsets.fromLTRB(11, 02, 220, 02),
-          margin: EdgeInsets.all(04),
-          child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                backgroundColor: Color(0xff076614),
-                foregroundColor: Colors.white,
-              ),
-              onPressed: (){
-                setState(() {
-                  rayat.add( {'spacies': null, 'kg': TextEditingController()}
-                  );
-                });
-              }, child: const Text("আরও যোগ করুন", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),)),
-        ),
+        //
+        // Container(
+        //   padding: EdgeInsets.fromLTRB(11, 02, 220, 02),
+        //   margin: EdgeInsets.all(04),
+        //   child: ElevatedButton(
+        //       style: ElevatedButton.styleFrom(
+        //         shape: RoundedRectangleBorder(
+        //           borderRadius: BorderRadius.circular(10.0),
+        //         ),
+        //         backgroundColor: Color(0xff076614),
+        //         foregroundColor: Colors.white,
+        //       ),
+        //       onPressed: (){
+        //         setState(() {
+        //           rayat.add( {'spacies': null, 'kg': TextEditingController()}
+        //           );
+        //         });
+        //       }, child: const Text("আরও যোগ করুন", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),)),
+        // ),
 
         Container(
             margin: EdgeInsets.fromLTRB(2, 08, 2, 03),
