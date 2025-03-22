@@ -15,7 +15,6 @@ class _FoodexpensesState extends State<Foodexpenses> {
   String? fish_spacies;
   TextEditingController fishnumber = TextEditingController();
 
-
   List fishSpecies = [
     { 'name': 'প্রাকৃতিক খাদ্য' },
     {'name': 'ফিড জাতীয় খাদ্য'},
