@@ -49,6 +49,7 @@ import 'package:tania_farm/Cow/Treatment/Treatment.dart';
 import 'package:tania_farm/Home.dart';
 import 'package:tania_farm/Ichamoti/IchamotiExpenses/FoodExpenses.dart';
 import 'package:tania_farm/Ichamoti/IchamotiExpenses/IchamotiExpenses.dart';
+import 'package:tania_farm/Ichamoti/IchamotiExpenses/Labourlist.dart';
 import 'package:tania_farm/Ichamoti/OthersFeatures.dart';
 import 'package:tania_farm/Ichamoti/fishsells.dart';
 import 'package:tania_farm/Ichamoti/ichamotidashboard.dart';
@@ -151,6 +152,8 @@ class MyApp extends StatelessWidget {
         '/othersfeatures': (context) => othersFeatures(),
         '/ichamotiexpenses': (context) => IchamotiExpenses(),
         '/foodexpenses': (context) => Foodexpenses(),
+
+        '/expenseslabourlist': (context) => ExpensesLabourList(),
 
       },
 

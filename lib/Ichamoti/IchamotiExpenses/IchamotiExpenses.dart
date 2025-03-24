@@ -37,7 +37,7 @@ class _IchamotiExpensesState extends State<IchamotiExpenses> {
               label: 'শ্রমিকদের তালিকা',
               color: Colors.lightBlue,
               onTap: () {
-                print('Job Card clicked');
+               Navigator.pushNamed(context, '/expenseslabourlist');
               },
             ),
             DashboardButton(

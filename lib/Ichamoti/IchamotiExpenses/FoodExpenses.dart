@@ -106,6 +106,21 @@ class _FoodexpensesState extends State<Foodexpenses> {
               margin: EdgeInsets.fromLTRB(2, 08, 2, 0),
               child: CustomTextField(controller: fishnumber, hintText: "মাছের খাদ্যের কেনার পরিমাণ: (কেজি বা টন)", obscureText: false, textinputtypephone: true)),
 
+
+          Container( padding: EdgeInsets.all(10),
+            margin: EdgeInsets.all(04),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  backgroundColor: Color(0xff076614),
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: (){
+                }, child: const Text("জমা দিন", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),)),
+          ),
+
         ],
       ),
 
